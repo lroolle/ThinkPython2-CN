@@ -10,7 +10,7 @@ assignment.
 
 这个章节主要涉及迭代，它可以实现重复运行某个代码块的功能。我们已经在「递归」
 部分看到了一种利用递归的迭代方式；另一种利用 ``for`` 循环的方式我们也在「重复」
-部分见识了。这个章节，我们将讨论另外一种利用 ```while`` 语句来实现的方式。
+部分见识了。这个章节，我们将讨论另外一种利用 ``while`` 语句来实现的方式。
 不过，首先我想再多讨论讨论有关变量赋值的问题。
 
 
@@ -59,7 +59,7 @@ example, in mathematics, if :math:`a=7` then :math:`7=a`. But in Python,
 the statement ``a = 7`` is legal and ``7 = a`` is not.
 
 首先，「等于」是一种对等关系，而「赋值」不是。比如说，数学上，如果 :math:`a=7`，
-则 :math:`7=a`。但是在 Python 中，表述 ``a = 7`` 是合法的，```7 = a`` 则不合法。
+则 :math:`7=a`。但是在 Python 中，表述 ``a = 7`` 是合法的，``7 = a`` 则不合法。
 
 Also, in mathematics, a proposition of equality is either true or false
 for all time. If :math:`a=b` now, then :math:`a` will always equal
@@ -154,7 +154,7 @@ iterate using recursion. Because iteration is so common, Python provides
 language features to make it easier. One is the for statement we saw in
 Section [repetition]. We’ll get back to that later.
 
-我们已经见识过两个利用「递归」来迭代的函数 ```countdown`` 和 ``print_n``。迭代如此普遍，
+我们已经见识过两个利用「递归」来迭代的函数 ``countdown`` 和 ``print_n``。迭代如此普遍，
 所以 Python 提供了更加简洁的语法来实现。其一是我们在「重复(repetition)」部分看到的
 ``for` 语句，后面我们还会继续讨论它。
 
@@ -175,7 +175,7 @@ You can almost read the while statement as if it were English. It means,
 “While n is greater than 0, display the value of n and then decrement n.
 When you get to 0, display the word Blastoff!”
 
-你可以像读英语句子一样来理解 ```while`` 语句。意思就是：“当 n 的值大于 0 时，
+你可以像读英语句子一样来理解 ``while`` 语句。意思就是：“当 n 的值大于 0 时，
 打印出 n 的值，然后让 n 减一，最后当 n 递减至 0 时，打印单词 Blastoff！”。
 
 More formally, here is the flow of execution for a while statement:
@@ -347,7 +347,7 @@ with the following formula:
 .. math:: y = \frac{x + a/x}{2}
 
  For example, if :math:`a` is 4 and :math:`x` is 3:
- 
+
  比如说，假定 :math:`a` 是 4，:math:`x` 是 3：
 
 ::
@@ -472,8 +472,8 @@ This trick is a general solution for multiplying any single-digit number
 by 9. That’s an algorithm!
 
 不过，如果你比较 “懒”，你可能就会找到一些诀窍。比如说为了计算 :math:`n`
-和 9 的乘积，你可以把 :math:`n-1`作为乘积的第一位数，再把 :math:`10-n` 
-作为乘积的第二位数，从而得到它们的乘积。这是种普遍的用于计算任意个位数
+和 9 的乘积，你可以把 :math:`n-1` 作为乘积的第一位数，再把 :math:`10-n` 作
+为乘积的第二位数，从而得到它们的乘积。这是种普遍的用于计算任意个位数
 与 9 相乘的诀窍。 这种诀窍就是种「算法」。
 
 Similarly, the techniques you learned for addition with carrying,
@@ -499,8 +499,8 @@ far no one has been able to explain *how* we do it, at least not in the
 form of an algorithm.
 
 人们所做的自然而然的、毫无难度或者说无意识的事情往往是最难用算法来阐释的。
-比如说，要理解自然语言就是个很好的例子。我们都这么可以理解语言，但是目前，
-还没有人能够解释我们是 *怎么（how）* 理解的，至少可以说这种理解不是一种算法的形式。
+比如说，要理解自然语言就是个很好的例子。谁都可以自然而然地理解语言，但是目前，
+却还没有人能够解释我们是 *怎么（how）* 理解的，至少可以说这种理解不是一种算法的形式。
 
 Debugging 调试
 ---------------
@@ -524,7 +524,7 @@ program, or near it, for an intermediate value you can check. Add a
 print statement (or something else that has a verifiable effect) and run
 the program.
 
-取而代之，试着将问题拆为两半。检查代码中间部分或者附近的中间值，加上一行 
+取而代之，试着将问题拆为两半。检查代码中间部分或者附近的中间值，加上一行
 ``print()`` 语句（或者其他可以检验的措施），然后重新运行程序。
 
 If the mid-point check is incorrect, there must be a problem in the
@@ -548,8 +548,8 @@ program where there might be errors and places where it is easy to put a
 check. Then choose a spot where you think the chances are about the same
 that the bug is before or after the check.
 
-实践中可能并不能很好的确定程序的 “中间部分” 是什么，也有可能并不是那么好检查。
-所以计算行数并且取其中间行是没有意义的。多考虑下程序中比较容易出问题的部分或者
+实践中可能并不能很好的确定程序的 “中间部分” 是什么，也有可能并不是那么适宜检查。
+所以根据行数来取其中间行是没有意义的。此时，多考虑下程序中比较容易出问题的部分或者
 比较适合检查的位置反而是比较好的做法，然后再在此基础上设定一个检查点，Bug 可能
 就出在它的前面或者后面。
 
@@ -558,47 +558,47 @@ Glossary 术语
 
 reassignment（重赋值）:
     Assigning a new value to a variable that already exists.
-	
+
 	给已经存在的变量赋一个新的值。
 
 update（更新）:
     An assignment where the new value of the variable depends on the
     old.
-	
+
 	变量的新值取决于旧值的一种赋值。
 
 initialization（初始化）:
     An assignment that gives an initial value to a variable that will be
     updated.
-	
+
 	给即将要更新的变量一个初始值的一种赋值。
 
 increment（递增）:
     An update that increases the value of a variable (often by one).
-	
+
 	通过增加的方式来更新变量值（通常是加 1）
 
 decrement（递减）:
     An update that decreases the value of a variable.
-	
+
 	通过减少的方式来更新变量值。
 
 iteration（迭代）:
     Repeated execution of a set of statements using either a recursive
     function call or a loop.
-	
+
 	利用递归或者循环的方式来重复执行代某个码块的过程。
 
 infinite loop（无限循环）:
     A loop in which the terminating condition is never satisfied.
 
 	没有（满足）终止条件的循环。
-	
+
 algorithm（算法）:
     A general process for solving a category of problems.
 
 	为解决一系列问题的通用过程。
-	
+
 
 Exercises 练习
 --------------
@@ -668,7 +668,7 @@ value of the last expression it evaluated.
 The mathematician Srinivasa Ramanujan found an infinite series that can
 be used to generate a numerical approximation of :math:`1 / \pi`:
 
-数学家 Srinivasa Ramanujan 发现了一个无穷级数可以用来生成 :math:`1 / \pi` 
+数学家 Srinivasa Ramanujan 发现了一个无穷级数可以用来生成 :math:`1 / \pi`
 的近似值。
 
 .. math::
@@ -682,8 +682,8 @@ loop to compute terms of the summation until the last term is smaller
 than 1e-15 (which is Python notation for :math:`10^{-15}`). You can
 check the result by comparing it to math.pi.
 
-写一个名为 ``estimate_pi`` 的函数，利用上面公式来估算出 :math:`\pi` 
-的值，并且返回该值。使用 ``while`` 循环来计算所有项的和，当和小于 1e-15 
+写一个名为 ``estimate_pi`` 的函数，利用上面公式来估算出 :math:`\pi`
+的值，并且返回该值。使用 ``while`` 循环来计算所有项的和，当和小于 1e-15
 （Python 中用于表达 :math:`10^{-15}` 的写法）时终止循环。
 
 Solution（答案）: http://thinkpython2.com/code/pi.py.

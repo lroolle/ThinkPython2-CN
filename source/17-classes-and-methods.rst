@@ -1,5 +1,5 @@
-Classes and methods
-===================
+Classes and methods 类和方法
+=============================
 
 Although we are using some of Python’s object-oriented features, the
 programs from the last two chapters are not really object-oriented
@@ -7,6 +7,10 @@ because they don’t represent the relationships between
 programmer-defined types and the functions that operate on them. The
 next step is to transform those functions into methods that make the
 relationships explicit.
+
+尽管我们已经在使用 Python 面向对的一些特性了，但是之前两章的程序并不是
+真正意义上的面向对象，它们不能表现出程序员自己定义的类型和相应函数的关系。
+要明确这种关系，下一步要做的是把这些函数转变成相应的方法。
 
 Code examples from this chapter are available from
 http://thinkpython2.com/code/Time2.py, and solutions to the exercises

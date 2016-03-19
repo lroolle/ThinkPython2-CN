@@ -11,10 +11,10 @@
 | [第二章](./source/02-variables-expressions-and-statements.rst)     | [@bingjin](https://github.com/bingjin)  | 完成 | 完成 |
 | [第三章](./source/03-functions.rst)     | [@bingjin](https://github.com/bingjin)  | 完成 | 完成 |
 | [第四章](./source/04-case-study-interface-design.rst)     | [@bingjin](https://github.com/bingjin)  | 完成 | 完成 |
-| [第五章](./source/05-conditionals-and-recursion.rst)     | [@ipyher](https://github.com/iphyer)    |完成 |  |
-| [第六章](./source/06-fruitful-functions.rst)     |   [@theJian](https://github.com/thejian)   | 完成 |  |
-| [第七章](./source/07-iteration.rst)     | [@F-Karl](https://github.com/F-Karl)    |  |  |
-| [第八章](./source/08-strings.rst)     | [@xpgeng](https://github.com/xpgeng)    |  |  |
+| [第五章](./source/05-conditionals-and-recursion.rst)     | [@ipyher](https://github.com/iphyer)    |完成 | 完成 |
+| [第六章](./source/06-fruitful-functions.rst)     |   [@theJian](https://github.com/thejian)   | 完成 | 完成 |s
+| [第七章](./source/07-iteration.rst)     | [@lroolle](https://github.com/lroolle)    | 完成 |  |
+| [第八章](./source/08-strings.rst)     | [@xpgeng](https://github.com/xpgeng)    | 完成 |  |
 | [第九章](./source/09-case-study-word-play.rst)     | [@ipyher](https://github.com/iphyer)    | 完成 |  |
 | [第十章](./source/10-lists.rst)     | [@obserthinker](https://github.com/obserthinker)     |完成 |  |
 | [第十一章](./source/11-dictionaries.rst)     |   [@theJian](https://github.com/thejian)   | 完成 |  |

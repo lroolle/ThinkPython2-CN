@@ -16,20 +16,31 @@ Code examples from this chapter are available from
 http://thinkpython2.com/code/Time2.py, and solutions to the exercises
 are in http://thinkpython2.com/code/Point2_soln.py.
 
-Object-oriented features
-------------------------
+这章的示例代码在：http://thinkpython2.com/code/Time2.py.
+答案在：http://thinkpython2.com/code/Point2_soln.py.
+
+Object-oriented features 面向对象的一些特性
+--------------------------------------------
 
 Python is an **object-oriented programming language**, which means that
 it provides features that support object-oriented programming, which has
 these defining characteristics:
 
+Python 是一门 **面向对象的语言**，这就意味着它可以支持面向对象编程，并且有着以下特征：
+
 -  Programs include class and method definitions.
+
+- 程序包含类和方法的定义。
 
 -  Most of the computation is expressed in terms of operations on
    objects.
 
+- 大部分计算都是在对象上操作的。
+
 -  Objects often represent things in the real world, and methods often
    correspond to the ways things in the real world interact.
+
+- 对象经常表示真实世界中的事物，而方法则与事物之间的相互作用相对应。
 
 For example, the Time class defined in Chapter [time] corresponds to the
 way people record the time of day, and the functions we defined
@@ -37,30 +48,51 @@ correspond to the kinds of things people do with times. Similarly, the
 Point and Rectangle classes in Chapter [clobjects] correspond to the
 mathematical concepts of a point and a rectangle.
 
+比如说，「时间（time）」章节中定义的 ``Time`` 类就是与日常人们计时的方式对应，
+其中定义的函数则是与人们对时间的处理相对应。类似的，在「clobjects」章节中定义的
+``Point`` 和 ``Rectangle`` 类则与数学中的「点」和「矩形」概念对应。
+
 So far, we have not taken advantage of the features Python provides to
 support object-oriented programming. These features are not strictly
 necessary; most of them provide alternative syntax for things we have
 already done. But in many cases, the alternative is more concise and
 more accurately conveys the structure of the program.
 
+目前为止，我们还没有利用好 Python 为支持面向对象提供的特性。这些特性并不是完全必
+要的；其中大部分特性为我们之前已经学过的提供了另外一种替代的语法。大部分情况下，
+这种替代的写法可以更为精简、准确地体现程序的结构。
+
 For example, in Time1.py there is no obvious connection between the
 class definition and the function definitions that follow. With some
 examination, it is apparent that every function takes at least one Time
 object as an argument.
+
+例如，``Time1.py`` 中类定义和其中函数的定义之间没有明显的联系。稍微检查后，
+很明显的每个函数都有一个 ``Time`` 对象的参数。
 
 This observation is the motivation for **methods**; a method is a
 function that is associated with a particular class. We have seen
 methods for strings, lists, dictionaries and tuples. In this chapter, we
 will define methods for programmer-defined types.
 
+这种观察是 **方法** 的驱动（译注：哪种观察？？观察？），方法就是与特定类关联的函数。
+我们已经见识过了字符串、列表，字典，和元组的方法。这个章节我们将会定义自定义类型
+的方法。
+
 Methods are semantically the same as functions, but there are two
 syntactic differences:
+
+方法在语义上跟函数是一样的，两个不同点是：
 
 -  Methods are defined inside a class definition in order to make the
    relationship between the class and the method explicit.
 
+- 为使类和方法的关系更为明确，我们在类中定义方法。
+
 -  The syntax for invoking a method is different from the syntax for
    calling a function.
+
+- 使用方法的语法与调用函数是不一样的。
 
 In the next few sections, we will take the functions from the previous
 two chapters and transform them into methods. This transformation is
@@ -68,11 +100,18 @@ purely mechanical; you can do it by following a sequence of steps. If
 you are comfortable converting from one form to another, you will be
 able to choose the best form for whatever you are doing.
 
-Printing objects
-----------------
+在接下来的几个小节中，我们将把之前两个章节中的函数转变成方法。这种转变是很死的过
+程，你可以按下面的步骤来实现。如果你能很好的把一个形式转换成另一个形式，你将会选
+择一个最好的形式来完成所有的转换。
+
+Printing objects 打印对象
+-------------------------
 
 In Chapter [time], we defined a class named Time and in
 Section [isafter], you wrote a function named ``print_time``:
+
+在「时间（time）」章节中，我们定义了一个名为 ``Time`` 的类，在「isafter」部分，
+你写了一个 ``print_time`` 的函数：
 
 ::
 
@@ -83,6 +122,8 @@ Section [isafter], you wrote a function named ``print_time``:
         print('%.2d:%.2d:%.2d' % (time.hour, time.minute, time.second))
 
 To call this function, you have to pass a Time object as an argument:
+
+要调用这个函数，你必须传递一个 Time 对象作为参数。
 
 ::
 
@@ -97,6 +138,9 @@ To make ``print_time`` a method, all we have to do is move the function
 definition inside the class definition. Notice the change in
 indentation.
 
+要让 ``print_time`` 成为一个方法，我们要做的只是把函数移到一个定义的类中。同时注
+意代码的缩进。
+
 ::
 
     class Time:
@@ -105,6 +149,9 @@ indentation.
 
 Now there are two ways to call ``print_time``. The first (and less
 common) way is to use function syntax:
+
+现在，就有两种方式来调用 ``print_time`` 了，第一种（不常见）的方式是使用函数的
+语法：
 
 ::
 
@@ -115,7 +162,11 @@ In this use of dot notation, Time is the name of the class, and
 ``print_time`` is the name of the method. start is passed as a
 parameter.
 
+对于这种 ``.`` 标记法，Time 是类名，``print_time`` 是方法名，start 是传递的参数。
+
 The second (and more concise) way is to use method syntax:
+
+第二种（更为简明）的方式则是使用使用方法语法：
 
 ::
 
@@ -127,6 +178,9 @@ In this use of dot notation, ``print_time`` is the name of the method
 called the **subject**. Just as the subject of a sentence is what the
 sentence is about, the subject of a method invocation is what the method
 is about.
+
+对于这种 ``.`` 标记法，``print_time`` 是方法名（又一次），start 是使用该方法的对
+象，称为 **主语**。正如句子的主语就是该句子的主体，方法的主语则是方法的主体。
 
 Inside the method, the subject is assigned to the first parameter, so in
 this case start is assigned to time.
